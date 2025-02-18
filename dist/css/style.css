@@ -387,7 +387,7 @@ h2 {
   -webkit-transition: scale 0.8s;
   transition: scale 0.8s;
 }
-.card__socials {
+.card__socs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,7 +403,7 @@ h2 {
   left: 20px;
   right: 20px;
 }
-.card__social {
+.card__soc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -416,11 +416,11 @@ h2 {
   padding: 5px;
   margin: -5px;
 }
-.card__social svg {
+.card__soc svg {
   width: 24px;
   height: 24px;
 }
-.card__social:hover {
+.card__soc:hover {
   scale: 1.1;
 }
 .card__content {
@@ -506,7 +506,7 @@ h2 {
 .footer__contact a:hover {
   color: var(--hover-color);
 }
-.footer__socials {
+.footer__socs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,7 +516,7 @@ h2 {
   gap: 5px;
   margin-left: -2px;
 }
-.footer__social {
+.footer__soc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,13 +531,13 @@ h2 {
   -webkit-transition: none;
   transition: none;
 }
-.footer__social svg {
+.footer__soc svg {
   width: 45px;
   height: 45px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.footer__social:hover svg {
+.footer__soc:hover svg {
   scale: 1.1;
 }
 .footer__main {
@@ -764,7 +764,7 @@ h2 {
             transform: translateX(0);
   }
 }
-.header__socials {
+.header__socs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -773,7 +773,7 @@ h2 {
           align-items: center;
   gap: 7px;
 }
-.header__social {
+.header__soc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -786,10 +786,10 @@ h2 {
   width: 34px;
   height: 34px;
 }
-.header__social:hover {
+.header__soc:hover {
   scale: 1.1;
 }
-.header__social svg {
+.header__soc svg {
   width: 30px;
   height: 30px;
 }
@@ -886,7 +886,7 @@ h2 {
           align-items: center;
   gap: 49px;
 }
-.hero__socials {
+.hero__socs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,7 +897,7 @@ h2 {
       flex-wrap: wrap;
   gap: 13px;
 }
-.hero__social {
+.hero__soc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -910,11 +910,11 @@ h2 {
   padding: 5px;
   margin: -5px;
 }
-.hero__social svg {
+.hero__soc svg {
   width: 24px;
   height: 24px;
 }
-.hero__social:hover {
+.hero__soc:hover {
   scale: 1.1;
 }
 .hero__ceo {
