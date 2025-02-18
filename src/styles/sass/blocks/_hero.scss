@@ -1,0 +1,120 @@
+.hero {
+  margin-bottom: clamp(40px, 6.5vw, 92px);
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    min-height: 624px;
+    padding: 80px 100px;
+    position: relative;
+    z-index: 1;
+    background: var(--d-gray);
+    color: #fff;
+    border-radius: var(--primary-border-radius);
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 2079px;
+      height: 1398px;
+      left: 50%;
+      top: -380px;
+      margin-left: -643px;
+      background: url('../img/hero-bg.webp') no-repeat center / contain;
+      z-index: -2;
+    }
+  }
+
+  &__text {
+    max-width: 654px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__title {
+    margin-bottom: 23px;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.19;
+    letter-spacing: -0.01em;
+  }
+
+  &__description {
+    max-width: 560px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 2rem;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 49px;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: -5px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  &__ceo {
+    padding-right: 7px;
+    font-size: 15px;
+
+    &-name {
+      font-family: var(--secondary-font), serif;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    &-post {
+      margin-top: 5px;
+    }
+
+    &-photo {
+      position: absolute;
+      width: 463px;
+      height: 624px;
+      z-index: -1;
+      bottom: -12px;
+      left: 50%;
+      margin-left: 70px;
+      object-fit: contain;
+      user-select: none;
+      pointer-events: none;
+
+      @include respond-to(xlarge) {
+        right: 0;
+      }
+    }
+  }
+}

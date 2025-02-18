@@ -1,0 +1,145 @@
+.footer {
+  background: var(--l-blue);
+  color: var(--seconadary-color);
+
+  &__container {
+    display: flex;
+    min-height: 341px;
+    padding-block: 70px 45px;
+    gap: clamp(40px, 6.5vw, 118px);
+  }
+
+  &__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 314px;
+  }
+
+  &__logo {
+    align-self: flex-start;
+    margin-top: 2px;
+    font-family: var(--secondary-font), serif;
+    font-weight: 700;
+    font-size: clamp(22px, 4vw, 36px);
+    line-height: 1.39;
+    color: var(--seconadary-color);
+    letter-spacing: -0.01em;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: auto;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      line-height: 1.4;
+    }
+  }
+
+  &__contact {
+    a:hover {
+      color: var(--hover-color);
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: -2px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    transition: none;
+
+    svg {
+      width: 45px;
+      height: 45px;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      svg {
+        scale: 1.1;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 87px;
+    padding-top: 4px;
+    line-height: 1.4;
+
+    @include respond-to(xlarge) {
+      gap: 30px;
+    }
+
+    &-col {
+      min-width: 129px;
+
+      @include respond-to(xlarge) {
+        flex: 1;
+
+        &:last-child {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      color: #799ee5;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &-link {
+      &:hover {
+        color: var(--hover-color);
+      }
+    }
+  }
+
+  &__info {
+    margin-top: auto;
+    padding-bottom: 3px;
+    opacity: 0.5;
+    font-size: 12px;
+    line-height: 2;
+  }
+
+  &__policy {
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

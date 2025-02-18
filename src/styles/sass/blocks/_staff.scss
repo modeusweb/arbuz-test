@@ -1,0 +1,13 @@
+.staff {
+  margin-bottom: clamp(40px, 6.5vw, 60px);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+}

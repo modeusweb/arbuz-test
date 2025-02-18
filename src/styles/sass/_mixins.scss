@@ -1,0 +1,36 @@
+// Define breakpoints
+$breakpoints: (
+  xsmall: 375,
+  small: 576,
+  medium: 768,
+  large: 992,
+  mlarge: 1024,
+  xlarge: 1200,
+  xxlarge: 1400,
+);
+
+// Mixin for max-width media queries
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value {
+    @media (max-width: #{$value - 1}px) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}. Please use one of #{map-keys($breakpoints)}.";
+  }
+}
+
+// Mobile-first mixin for min-width media queries
+@mixin respond-from($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value {
+    @media (min-width: #{$value}px) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}. Please use one of #{map-keys($breakpoints)}.";
+  }
+}

@@ -1,0 +1,7 @@
+#dist
+public
+*.min.css
+*.min.js
+
+*header.html
+*footer.html
