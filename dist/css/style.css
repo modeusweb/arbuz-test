@@ -516,7 +516,7 @@ h2 {
   gap: 5px;
   margin-left: -2px;
 }
-.footer__soc {
+.footer__socs-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -531,13 +531,13 @@ h2 {
   -webkit-transition: none;
   transition: none;
 }
-.footer__soc svg {
+.footer__socs-item svg {
   width: 45px;
   height: 45px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.footer__soc:hover svg {
+.footer__socs-item:hover svg {
   scale: 1.1;
 }
 .footer__main {

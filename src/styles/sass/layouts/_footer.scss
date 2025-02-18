@@ -52,25 +52,25 @@
     align-items: center;
     gap: 5px;
     margin-left: -2px;
-  }
 
-  &__soc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 51px;
-    height: 51px;
-    transition: none;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 51px;
+      height: 51px;
+      transition: none;
 
-    svg {
-      width: 45px;
-      height: 45px;
-      transition: 0.3s;
-    }
-
-    &:hover {
       svg {
-        scale: 1.1;
+        width: 45px;
+        height: 45px;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        svg {
+          scale: 1.1;
+        }
       }
     }
   }
