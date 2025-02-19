@@ -4,6 +4,15 @@ body {
   line-height: 1.5;
   background-color: var(--primary-bg-color);
   color: var(--primary-color);
+
+  @include respond-to(mlarge) {
+    &.lock-scroll {
+      overflow: hidden;
+      position: fixed;
+      left: 0;
+      width: 100%;
+    }
+  }
 }
 
 img {
@@ -60,6 +69,10 @@ h2 {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 clamp(24px, 5vw, 80px);
+
+  @include respond-to(medium) {
+    padding-inline: 24px;
+  }
 }
 
 .page-wrapper {

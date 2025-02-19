@@ -9,5 +9,17 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+
+    @include respond-to(xlarge) {
+      gap: 20px;
+    }
+
+    @include respond-to(mlarge) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(small) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

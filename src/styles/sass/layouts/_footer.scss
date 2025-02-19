@@ -7,6 +7,14 @@
     min-height: 341px;
     padding-block: 70px 45px;
     gap: clamp(40px, 6.5vw, 118px);
+
+    @include respond-to(medium) {
+      flex-direction: column;
+      gap: 2px;
+      min-height: 0;
+      padding-block: 20px 33px;
+      font-size: 14px;
+    }
   }
 
   &__aside {
@@ -14,6 +22,11 @@
     flex-direction: column;
     gap: 18px;
     width: 314px;
+
+    @include respond-to(medium) {
+      gap: 22px;
+      width: auto;
+    }
   }
 
   &__logo {
@@ -25,6 +38,10 @@
     line-height: 1.39;
     color: var(--seconadary-color);
     letter-spacing: -0.01em;
+
+    @include respond-to(medium) {
+      font-size: 22px;
+    }
   }
 
   &__contacts {
@@ -33,11 +50,19 @@
     gap: 16px;
     margin-top: auto;
 
+    @include respond-to(medium) {
+      gap: 23px;
+    }
+
     &-list {
       display: flex;
       flex-direction: column;
       gap: 7px;
       line-height: 1.4;
+
+      @include respond-to(medium) {
+        line-height: 1.2;
+      }
     }
   }
 
@@ -53,6 +78,11 @@
     gap: 5px;
     margin-left: -2px;
 
+    @include respond-to(medium) {
+      gap: 10px;
+      margin: 0;
+    }
+
     &-item {
       display: flex;
       align-items: center;
@@ -65,6 +95,16 @@
         width: 45px;
         height: 45px;
         transition: 0.3s;
+      }
+
+      @include respond-to(medium) {
+        width: 40px;
+        height: 40px;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
       }
 
       &:hover {
@@ -80,6 +120,10 @@
     flex-direction: column;
     flex: 1;
     gap: 1rem;
+
+    @include respond-to(medium) {
+      gap: 3px;
+    }
   }
 
   &__nav {
@@ -93,6 +137,11 @@
       gap: 30px;
     }
 
+    @include respond-to(medium) {
+      flex-direction: column;
+      gap: 0;
+    }
+
     &-col {
       min-width: 129px;
 
@@ -104,11 +153,69 @@
           width: 100%;
         }
       }
+
+      @include respond-to(medium) {
+        padding: 10px 0;
+        border-bottom: 1px solid #d9e4f8;
+
+        &:last-child {
+          border: none;
+        }
+
+        &.is-active {
+          .footer__nav-title {
+            color: #799ee5;
+
+            &:after {
+              transform: scaleY(-1);
+            }
+          }
+
+          .footer__nav-menu {
+            grid-template-rows: 1fr;
+            padding-bottom: 15px;
+          }
+        }
+      }
     }
 
     &-title {
       margin-bottom: 8px;
       color: #799ee5;
+      pointer-events: none;
+
+      @include respond-to(medium) {
+        margin: 0;
+        padding: 8px 15px 8px 0;
+        position: relative;
+        cursor: pointer;
+        pointer-events: auto;
+        color: var(--seconadary-color);
+        line-height: 1.45;
+
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          translate: 0 -50%;
+          width: 10px;
+          height: 7px;
+          transition: 0.3s;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI3IiBmaWxsPSJub25lIj48cGF0aCBzdHJva2U9IiMwMDQ4Q0UiIGQ9Im0xIDEuMjQzIDQuMjQyIDQuMjQyIDQuMjQzLTQuMjQyIi8+PC9zdmc+);
+        }
+      }
+    }
+
+    &-menu {
+      @include respond-to(medium) {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: 0.3s;
+      }
     }
   }
 
@@ -119,6 +226,10 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @include respond-to(medium) {
+      overflow: hidden;
+    }
 
     &-link {
       &:hover {
@@ -133,6 +244,11 @@
     opacity: 0.5;
     font-size: 12px;
     line-height: 2;
+
+    @include respond-to(medium) {
+      font-size: 10px;
+      line-height: 1.8;
+    }
   }
 
   &__policy {

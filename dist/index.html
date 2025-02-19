@@ -56,6 +56,34 @@
                 <a class="header__menu-link" href="#">О компании</a>
               </li>
             </ul>
+            <div class="header__nav-contacts">
+              <div class="header__nav-phones">
+                <div class="header__nav-phone">
+                  <a href="tel:+79998548585">+7 999 854 85 85</a> — Москва
+                </div>
+                <div class="header__nav-phone">
+                  <a href="tel:+79144873838">+7 914 487 38 38</a> — Владивосток
+                </div>
+              </div>
+              <div class="header__nav-socs">
+                <a
+                  class="header__nav-soc"
+                  href="https://t.me/+79998548585"
+                  target="_blank"
+                  aria-label="Telegram"
+                >
+                  <svg><use href="img/sprite.svg#tg"></use></svg>
+                </a>
+                <a
+                  class="header__nav-soc"
+                  href="https://wa.me/+79998548585"
+                  target="_blank"
+                  aria-label="WhatsApp"
+                >
+                  <svg><use href="img/sprite.svg#wa"></use></svg>
+                </a>
+              </div>
+            </div>
           </nav>
           <div class="header__right">
             <div class="header__socs">
@@ -80,6 +108,10 @@
               >+7 999 854 85 85</a
             >
             <a class="header__lang" href="#">En</a>
+            <button class="header__burger js-burger" aria-label="Открыть меню">
+              <svg><use href="img/sprite.svg#burger"></use></svg>
+              <svg><use href="img/sprite.svg#close"></use></svg>
+            </button>
           </div>
         </div>
       </header>
@@ -110,7 +142,7 @@
                 </div>
                 <div class="hero__bottom">
                   <div class="hero__contacts">
-                    <button class="btn">
+                    <button class="hero__connect btn">
                       <span>Связаться напрямую</span>
                       <svg><use href="img/sprite.svg#arrow"></use></svg>
                     </button>
@@ -416,49 +448,55 @@
             <nav class="footer__nav">
               <div class="footer__nav-col">
                 <div class="footer__nav-title">О компании</div>
-                <ul class="footer__menu">
-                  <li class="footer__menu-item">
-                    <a class="footer__menu-link" href="#">О нас</a>
-                  </li>
-                  <li class="footer__menu-item">
-                    <a class="footer__menu-link" href="#">Команда</a>
-                  </li>
-                  <li class="footer__menu-item">
-                    <a class="footer__menu-link" href="#">Контакты</a>
-                  </li>
-                  <li class="footer__menu-item">
-                    <a class="footer__menu-link" href="#">Блог</a>
-                  </li>
-                </ul>
+                <div class="footer__nav-menu">
+                  <ul class="footer__menu">
+                    <li class="footer__menu-item">
+                      <a class="footer__menu-link" href="#">О нас</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a class="footer__menu-link" href="#">Команда</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a class="footer__menu-link" href="#">Контакты</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a class="footer__menu-link" href="#">Блог</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="footer__nav-col">
                 <div class="footer__nav-title">Недвижимость</div>
-                <ul class="footer__menu">
-                  <li class="footer__menu-item">
-                    <a class="footer__menu-link" href="#">Жилая</a>
-                  </li>
-                  <li class="footer__menu-item">
-                    <a class="footer__menu-link" href="#">Коммерческая</a>
-                  </li>
-                  <li class="footer__menu-item">
-                    <a class="footer__menu-link" href="#">Инвестиционная</a>
-                  </li>
-                </ul>
+                <div class="footer__nav-menu">
+                  <ul class="footer__menu">
+                    <li class="footer__menu-item">
+                      <a class="footer__menu-link" href="#">Жилая</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a class="footer__menu-link" href="#">Коммерческая</a>
+                    </li>
+                    <li class="footer__menu-item">
+                      <a class="footer__menu-link" href="#">Инвестиционная</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="footer__nav-col">
                 <div class="footer__nav-title">Услуги</div>
-                <ul class="footer__menu">
-                  <li class="footer__menu-item">
-                    <a class="footer__menu-link" href="#"
-                      >По подбору недвижимости</a
-                    >
-                  </li>
-                  <li class="footer__menu-item">
-                    <a class="footer__menu-link" href="#"
-                      >Юридическое сопровождение</a
-                    >
-                  </li>
-                </ul>
+                <div class="footer__nav-menu">
+                  <ul class="footer__menu">
+                    <li class="footer__menu-item">
+                      <a class="footer__menu-link" href="#"
+                        >По подбору недвижимости</a
+                      >
+                    </li>
+                    <li class="footer__menu-item">
+                      <a class="footer__menu-link" href="#"
+                        >Юридическое сопровождение</a
+                      >
+                    </li>
+                  </ul>
+                </div>
               </div>
             </nav>
 

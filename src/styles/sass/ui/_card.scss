@@ -18,6 +18,10 @@
     position: relative;
     overflow: hidden;
 
+    @include respond-to(small) {
+      padding-bottom: 80%;
+    }
+
     img {
       position: absolute;
       left: 0;
@@ -65,11 +69,20 @@
     padding: 15px 30px 17px;
     text-align: center;
     line-height: 1.4;
+
+    @include respond-to(medium) {
+      gap: 4px;
+      padding: 7px 16px 13px;
+    }
   }
 
   &__name {
     font-size: 18px;
     font-family: var(--secondary-font), serif;
+
+    @include respond-to(medium) {
+      font-size: 20px;
+    }
   }
 
   &__post {
@@ -77,5 +90,9 @@
     font-size: 14px;
     line-height: 1.43;
     color: #7d8cb4;
+
+    @include respond-to(medium) {
+      min-height: 0;
+    }
   }
 }

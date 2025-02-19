@@ -10,15 +10,26 @@
     justify-content: space-between;
     gap: 0.5rem;
     padding-block: 25px;
+
+    @include respond-to(mlarge) {
+      padding-block: 22px;
+    }
   }
 
   &__logo {
+    position: relative;
+    z-index: 10;
     font-family: var(--secondary-font), serif;
     font-weight: 700;
     font-size: clamp(22px, 4vw, 36px);
     line-height: 1.39;
     color: var(--seconadary-color);
     letter-spacing: -0.01em;
+
+    @include respond-to(mlarge) {
+      font-size: 22px;
+      line-height: 1.45;
+    }
   }
 
   &__nav {
@@ -27,6 +38,67 @@
 
     @include respond-to(xlarge) {
       padding-left: 0;
+    }
+
+    @include respond-to(mlarge) {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: fixed;
+      right: 0;
+      width: 50%;
+      top: 0;
+      bottom: 0;
+      padding: 80px 24px 40px;
+      background: var(--primary-bg-color);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+      overflow: auto;
+      transition: 0.3s;
+      transform: translateX(110%);
+
+      &.is-active {
+        transform: translateX(0);
+      }
+    }
+
+    @include respond-to(medium) {
+      width: 100%;
+    }
+
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      margin-top: auto;
+
+      @include respond-from(mlarge) {
+        display: none;
+      }
+    }
+
+    &-phones {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 14px;
+    }
+
+    &-socs {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    &-soc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 
@@ -40,6 +112,12 @@
 
     @include respond-to(xlarge) {
       gap: 5px;
+    }
+
+    @include respond-to(mlarge) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
     }
 
     &-item {
@@ -59,6 +137,10 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjUiIGZpbGw9Im5vbmUiPjxwYXRoIHN0cm9rZT0iIzAwNDhDRSIgZD0iTTcgMSA0LjAwMiA0IDEuMDAzIDEiLz48L3N2Zz4=);
+
+            @include respond-to(mlarge) {
+              display: none;
+            }
           }
         }
 
@@ -91,6 +173,14 @@
       &:hover {
         background: var(--l-blue);
       }
+
+      @include respond-to(mlarge) {
+        padding: 0;
+        font-family: var(--secondary-font), serif;
+        font-size: 30px;
+        border-radius: 0;
+        background: transparent !important;
+      }
     }
   }
 
@@ -109,6 +199,16 @@
     transform: scaleY(0);
     transform-origin: top center;
 
+    @include respond-to(mlarge) {
+      position: static;
+      padding: 4px 0 5px 20px;
+      border: none;
+      background: transparent;
+      border-radius: 0;
+      transition: none;
+      transform: none;
+    }
+
     &-item {
       padding: 5px 0;
     }
@@ -126,11 +226,17 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    position: relative;
+    z-index: 10;
     color: var(--seconadary-color);
     transform: translate(7px, 1px);
 
     @include respond-to(xlarge) {
       transform: translateX(0);
+    }
+
+    @include respond-to(mlarge) {
+      gap: 34px;
     }
   }
 
@@ -138,6 +244,10 @@
     display: flex;
     align-items: center;
     gap: 7px;
+
+    @include respond-to(mlarge) {
+      display: none;
+    }
   }
 
   &__soc {
@@ -160,6 +270,10 @@
   &__phone {
     white-space: nowrap;
 
+    @include respond-to(mlarge) {
+      display: none;
+    }
+
     &:hover {
       color: var(--hover-color);
     }
@@ -171,6 +285,56 @@
 
     &:hover {
       text-decoration: none;
+    }
+
+    @include respond-to(mlarge) {
+      text-decoration: none;
+    }
+  }
+
+  &__burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 22px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      right: -10px;
+      top: -10px;
+      bottom: -10px;
+    }
+
+    @include respond-from(mlarge) {
+      display: none;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
+
+      &:last-child {
+        transform: scale(0);
+      }
+    }
+
+    &.is-active {
+      svg {
+        &:first-child {
+          transform: scale(0);
+        }
+        &:last-child {
+          transform: scale(1);
+        }
+      }
     }
   }
 }
